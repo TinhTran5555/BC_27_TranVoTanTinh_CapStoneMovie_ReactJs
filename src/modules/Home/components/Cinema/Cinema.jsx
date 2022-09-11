@@ -11,6 +11,7 @@ const Cinema = () => {
   isLoading,
   error,
 } = useRequest(() => movieAPI.GetCumRapDetails());
+console.log(cumraps);
 
   return ( 
     <Tabs id='cinema' className='max-w-5xl m-auto mt-5' defaultActiveKey="0"  tabPosition='left' >{cumraps?.map((cumrap,index) => { return ( 
@@ -39,7 +40,7 @@ const Cinema = () => {
           <Fragment key={index}>
             <div className='my-5'>
               <div className='flex items-center'>
-                <img className='w-20 h-20' src={movie.hinhAnh} alt={movie.hinhAnh} />
+                <img className='w-20 h-20 md:w-14' src={movie.hinhAnh} alt="hinhAnh"/>
                 <div className='ml-2 flex flex-col'>
                   <h1 className='text-2xl text-green-700'>{movie.tenPhim}</h1>
                   <div className='grid xl:grid-cols-6 xl:gap-6 lg:grid-cols-4 lg:gap-4'>

@@ -3,6 +3,10 @@ import useRequest from "hooks/useRequest";
 import movieAPI from "apis/movieAPI";
 import { Carousel } from 'antd';
 import React , {useState , useEffect} from 'react';
+import useViewport from "components/useViewport/useViewport";
+
+
+
 const contentStyle = {
   backgroundPosition: "center",
   backgroundSize:"cover",
@@ -42,6 +46,8 @@ const TRAILERS = [
 ];
 
 const Banner = () => {
+  const viewPort = useViewport();
+   console.log(viewPort);
   // const dispatch = useDispatch();
   // const { banners, isLoading, error } = useSelector((state) => state.banner);
   // useEffect(() => {

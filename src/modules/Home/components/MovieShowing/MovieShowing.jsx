@@ -10,6 +10,7 @@ import { Tabs } from "antd";
 import useViewport from "components/useViewport/useViewport";
 const MovieShowing = () => {
    const viewPort = useViewport();
+   console.log(viewPort);
    const isMobile = viewPort.width <= 1024;
    
   const navigate = useNavigate();
@@ -23,12 +24,20 @@ const MovieShowing = () => {
   const goToMovie = (movieId) => {
     navigate(`/movie/${movieId}`);
   };
+  let valueSlidesToShow = 3 ;
+  let valueSlidesToScroll = 3 ;
+    if (isMobile) {
+      valueSlidesToShow = 2;
+      valueSlidesToScroll = 2
+}
+
 
   const settings = {   dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: valueSlidesToShow,
+    slidesToScroll: valueSlidesToScroll,
+
     }
 
 
@@ -45,11 +54,12 @@ const MovieShowing = () => {
       <Tabs.TabPane tab={<h3 className="TabStyle">Đang chiếu</h3>} key="1">
         <Slider {...settings}>
           {movies?.map((movie) => {
+            
             if (movie.dangChieu === false) {
               return;
             }
             return (
-     <section className="text-gray-600 body-font">
+     <section key={movie.maPhim} className="text-gray-600 body-font">
   <div className="container px-5 py-20 mx-auto">
     <div className="flex flex-wrap -m-4">
       <div className="w-full">
@@ -79,7 +89,7 @@ const MovieShowing = () => {
   return;
 }
           return (
-            <section className="text-gray-600 body-font">
+            <section  key={movie.maPhim}  className="text-gray-600 body-font">
             <div className="container px-5 py-20 mx-auto">
               <div className="flex flex-wrap -m-4">
                 <div className="w-full">
