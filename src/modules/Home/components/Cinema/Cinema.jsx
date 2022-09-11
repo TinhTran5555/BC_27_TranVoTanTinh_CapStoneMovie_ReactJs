@@ -15,7 +15,7 @@ const Cinema = () => {
   return (
     <Tabs
       id="cinema"
-      className="max-w-5xl m-auto mt-5"
+      className="max-w-5xl m-auto mt-5 Cinema"
       defaultActiveKey="0"
       tabPosition="left"
     >
@@ -25,7 +25,7 @@ const Cinema = () => {
             key={index}
             tab={<img src={cumrap.logo} className="rounded-full w-12" />}
           >
-            <Tabs defaultActiveKey="0" tabPosition="left" className="">
+            <Tabs defaultActiveKey="0" tabPosition="left" className="Cinamalist">
               {cumrap.lstCumRap?.map((listcumrap, index) => {
                 return (
                   <Tabs.TabPane

@@ -12,7 +12,8 @@ const MovieShowing = () => {
   const viewPort = useViewport();
   console.log(viewPort);
   const isMobile = viewPort.width <= 1024;
-
+  const isSmallMobile = viewPort.width <= 640
+  ;
   const navigate = useNavigate();
 
   const {
@@ -30,6 +31,11 @@ const MovieShowing = () => {
     valueSlidesToShow = 2;
     valueSlidesToScroll = 2;
   }
+  if (isSmallMobile) {
+    valueSlidesToShow = 1;
+    valueSlidesToScroll = 1;
+  }
+
 
   const settings = {
     dots: true,

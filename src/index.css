@@ -56,8 +56,45 @@
     font-size: 40px;
     color: black;
 }
-@media and ( screen < 1024px ){
+
+
+
+  @media only screen and (min-width: 0px) {
+   
     .MovieShowing .slick-prev {
-        left: 0 
+        left: 0px;
+        transform: translateX(20px);
+    }
+    .MovieShowing .slick-next {
+        right: 0px;
+        transform: translateX(-20px);
+    }
+    .Cinema .ant-tabs-tabpane {
+        padding-left: 0!important;
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+   
+        .MovieShowing .slick-prev {
+            left: 0px;
+        }
+        .MovieShowing .slick-next {
+            right: 00px;
+            transform: translateX(-20px);
+        }
+        .Cinema .ant-tabs-tabpane {
+            padding-left: 24px!important;
+        }
+  }
+  @media only screen and (min-width: 1280px) {
+   
+    .MovieShowing .slick-prev {
+        left: -25px;
+    }
+    .MovieShowing .slick-next {
+        right: -25px;
     }
 }
