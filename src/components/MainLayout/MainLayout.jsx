@@ -7,16 +7,16 @@ import Footer from "../Footer";
 const MainLayout = () => {
   return (
     <Layout>
-      <Layout.Header className="fixStyleHeader h-24 container">
+      <Layout.Header className="fixStyleHeader container h-24">
         <Header />
       </Layout.Header>
-      <Layout.Content>
+       <Layout.Content>
         <Outlet />
       </Layout.Content>
       <Layout.Footer>
         
         <Footer />
-      </Layout.Footer>
+      </Layout.Footer> 
     </Layout>
   );
 };

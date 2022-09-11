@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
-  return ( <div className="container">
+  return ( <div className="">
     <div className="p-4 bg-opacity-40 bg-white text-black ">
       <div className="container flex justify-between h-16 mx-auto">
         <NavLink  to="/"
@@ -18,41 +18,24 @@ const Header = () => {
         </NavLink>
         <ul className="items-stretch hidden space-x-3 lg:flex">
           <li className="flex">
-            <NavLink to="/"
+            <a
               rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 border-b-2" activeClassName="border-b-2"
+              href="#cinema"
+              className="flex items-center px-4 -mb-1 border-b-2 no-underline text-black" activeClassName="border-b-2"
             >
               lịch Chiếu
-            </NavLink>
+            </a>
           </li>
           <li className="flex">
-            <NavLink to="/contact"
+            <a to="#footer"
               rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 "activeClassName="border-b-2"
+              href="#footer"
+              className="flex items-center px-4 -mb-1 no-underline text-black"activeClassName="border-b-2"
             >
               Liên Hệ
-            </NavLink>
+            </a>
           </li>
-          <li className="flex">
-            <NavLink to="/news"
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 "activeClassName="border-b-2"
-            >
-              Tin Tức
-            </NavLink>
-          </li>
-          <li className="flex">
-            <NavLink to="/contact"a
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 -mb-1 "activeClassName="border-b-2"
-            >
-              Ứng Dụng
-            </NavLink>
-          </li>
+
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex">
           <button className="self-center px-8 py-3 rounded">Đăng Ký</button>
@@ -76,6 +59,9 @@ const Header = () => {
             />
           </svg>
         </button>
+        
+
+
       </div>
     </div>
     </div>

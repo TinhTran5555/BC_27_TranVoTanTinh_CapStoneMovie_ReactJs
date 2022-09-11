@@ -7,11 +7,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Tabs } from "antd";
-
+import useViewport from "components/useViewport/useViewport";
 const MovieShowing = () => {
- 
+   const viewPort = useViewport();
+   const isMobile = viewPort.width <= 1024;
+   
   const navigate = useNavigate();
-
+ 
   const {
     data: movies,
     isLoading,
@@ -21,13 +23,15 @@ const MovieShowing = () => {
   const goToMovie = (movieId) => {
     navigate(`/movie/${movieId}`);
   };
-  const settings = {
-    dots: true,
+
+  const settings = {   dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-  };
+    }
+
+
  
   const imgStyle = {
     backgroundPosition: "center",
@@ -37,8 +41,8 @@ const MovieShowing = () => {
     
   }
   return (
-    <Tabs className='max-w-5xl m-auto' defaultActiveKey="1">
-      <Tabs.TabPane tab="Đang Chiếu" key="1">
+    <Tabs className='MovieShowing max-w-5xl m-auto mt-5' defaultActiveKey="1">
+      <Tabs.TabPane tab={<h3 className="TabStyle">Đang chiếu</h3>} key="1">
         <Slider {...settings}>
           {movies?.map((movie) => {
             if (movie.dangChieu === false) {
@@ -68,7 +72,7 @@ const MovieShowing = () => {
           })}
         </Slider>
       </Tabs.TabPane>
-      <Tabs.TabPane tab="Sắp Chiếu" key="2">
+      <Tabs.TabPane tab={<h3 className="TabStyle">Sắp chiếu</h3>} key="2">
       <Slider {...settings}>
         {movies?.map((movie) => {
  if (movie.sapChieu === false) {
