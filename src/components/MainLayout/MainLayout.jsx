@@ -7,13 +7,15 @@ import Footer from "../Footer";
 const MainLayout = () => {
   return (
     <Layout>
-      <Layout.Header className="fixStyleHeader container h-24">
+      <Layout.Header className="fixStyleHeader container ">
         <Header />
+        
       </Layout.Header>
-      <Layout.Content>
+      <Layout.Content className="container">
+        <div className="h-28"></div>
         <Outlet />
       </Layout.Content>
-      <Layout.Footer>
+      <Layout.Footer className="container">
         <Footer />
       </Layout.Footer>
     </Layout>

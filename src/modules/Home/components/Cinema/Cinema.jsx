@@ -67,7 +67,7 @@ const Cinema = () => {
                                     .map((lichChieu, index) => {
                                       return (
                                         <NavLink
-                                          className="text-xl text-green-400"
+                                          className="text-xl text-green-400 no-underline"
                                           to="/"
                                           key={index}
                                         >

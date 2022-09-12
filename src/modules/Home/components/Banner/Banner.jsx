@@ -43,8 +43,7 @@ const TRAILERS = [
 ];
 
 const Banner = () => {
-  const viewPort = useViewport();
-  console.log(viewPort);
+  
   // const dispatch = useDispatch();
   // const { banners, isLoading, error } = useSelector((state) => state.banner);
   // useEffect(() => {

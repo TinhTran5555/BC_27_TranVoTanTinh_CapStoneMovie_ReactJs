@@ -12,8 +12,7 @@ const MovieShowing = () => {
   const viewPort = useViewport();
   console.log(viewPort);
   const isMobile = viewPort.width <= 1024;
-  const isSmallMobile = viewPort.width <= 640
-  ;
+  const isSmallMobile = viewPort.width <= 640;
   const navigate = useNavigate();
 
   const {
@@ -35,7 +34,6 @@ const MovieShowing = () => {
     valueSlidesToShow = 1;
     valueSlidesToScroll = 1;
   }
-
 
   const settings = {
     dots: true,
@@ -80,12 +78,12 @@ const MovieShowing = () => {
                           <p className="leading-relaxed mb-3">
                             Đánh giá: {movie.danhGia}/10
                           </p>
-                          <button
-                            className="bg-sky-500 hover:bg-sky-700"
+                          <div
+                            className="bg-indigo-300 hover:bg-teal-200 text-center cursor-pointer py-2 my-2 text-teal-700 hover:text-indigo-500 font-bold hover:border-solid hover:boder hover:border-teal-500"
                             onClick={() => goToMovie(movie.maPhim)}
                           >
-                            Chi Tiết
-                          </button>
+                            CHI TIẾT
+                          </div>
                         </div>
                       </div>
                     </div>

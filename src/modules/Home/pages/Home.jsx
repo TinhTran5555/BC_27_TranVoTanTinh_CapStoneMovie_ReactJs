@@ -4,7 +4,7 @@ import MovieShowing from "../components/MovieShowing";
 
 const Home = () => {
   return (
-    <div className="mt-24">
+    <div>
       <Banner />
        <MovieShowing />
       <Cinema/>
