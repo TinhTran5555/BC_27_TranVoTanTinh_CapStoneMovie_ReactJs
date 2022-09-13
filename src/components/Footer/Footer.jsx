@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div id="footer" className="text-white py-5 text-xs bg-slate-800 footer">
       <div className="footerContent row">
-        <div className="col-6 col-md-4">
-          <div className="d-flex justify-content-between">
+        <div className="col-8 col-md-6 col-lg-4">
+          <div className="d-flex justify-content-center">
             <div className="d-none d-lg-block d-xl-block">
               <p className="mb-0">TIX</p>
               <a
@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="col-6 col-md-4 footer__company d-none d-lg-block d-xl-block">
+        <div className="footer__company col-lg-4 d-none d-lg-block d-xl-block">
           <p>Đối tác</p>
           <div>
             <div className="mb-3 justify-content-between d-flex w-75 align-items-center">
@@ -181,7 +181,7 @@ const Footer = () => {
            
           </div>
         </div>
-        <div className="col-6 col-md-4 d-flex text-center">
+        <div className="col-4 col-md-6 col-lg-4 d-flex text-center justify-content-center">
           <div className="w-50 d-none d-lg-block d-xl-block">
             <p className="pb-2">MOBIL APP</p>
             <div className="footer__mobile d-flex justify-content-around">
@@ -209,7 +209,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          <div className="w-50">
+          <div className="w-50 col-md-8 ">
             <p className="d-none d-lg-block d-xl-block pb-2">SOCIAL APP</p>
             <div className="d-flex justify-content-around text-center">
               <a
@@ -232,7 +232,7 @@ const Footer = () => {
       </div>
       <div className="footerContent container">
         <div className="row">
-          <div className="col-12 col-md-2 p-1 text-center">
+          <div className="col-12 col-md-2 p-2 text-center d-flex justify-content-center">
             <img
               src="https://cybersoft.edu.vn/wp-content/uploads/2017/03/MIN-OP1.png"
               alt="company"
@@ -253,7 +253,7 @@ const Footer = () => {
             </p>
           </div>
           <div
-            className="col-12 col-md-2 p-1 text-center"
+            className="col-12 col-md-2 p-1 text-center d-flex justify-content-center"
             style={{ position: "static" }}
           >
             <img src="https://movie-booking-project.vercel.app/img/media/certificate.png" alt="gvm" className="logobct" />

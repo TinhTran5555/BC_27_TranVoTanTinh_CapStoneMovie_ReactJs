@@ -23,7 +23,7 @@ const AddMovie = lazy(() => import("modules/AdminMovie/pages/AddMovie"));
 function App() {
   return (
     // Suspense: hiển thị fallback UI (Loading) khi các file JS của một page đang được tải về
-    <Suspense fallback={<h1>Loading...</h1>}>
+    <Suspense fallback={<h1>Loading...</h1>} >
       <Routes>
         <Route
           path="/admin"

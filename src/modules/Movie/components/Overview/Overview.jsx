@@ -2,9 +2,9 @@ import React, { Fragment } from "react";
 
 import useRequest from "hooks/useRequest";
 import movieAPI from "apis/movieAPI";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 const Overview = ({ movieId }) => {
   const {
@@ -29,7 +29,6 @@ const Overview = ({ movieId }) => {
     backgroundPosition: "center center",
     backgroundRepeat: " no-repeat",
     backgroundSize: "cover",
-    minHeight: "100vh",
   };
   const StyleDivBlur = {
     position: "absolute",
@@ -48,43 +47,47 @@ const Overview = ({ movieId }) => {
       }}
     >
       <div style={StyleDivBlur}></div>
-      <div className="grid grid-cols-12">
-        <div className="md:col-span-6 col-span-12">
+      <div className="grid grid-cols-12 md:pb-10">
+        <div className="md:col-span-6 col-span-12 col-start-3">
           <div className="w-4/5 border border-zinc-400 rounded-2xl">
             <img className="w-full" src={movie.hinhAnh} alt="" />
           </div>
         </div>
-        <div className="md:col-span-6 col-span-12">
-          <div className="flex flex-col flex-wrap items-start justify-center gap-2 h-full">
+        <div className="md:col-span-6 col-span-12  md:pb-0  pb-5">
+          <div className="flex flex-col flex-wrap justify-center gap-2 h-full items-center mt-3">
             <div className="flex flex-row flex-wrap items-center justify-start gap-4">
               <div className="truncate items-center justify-center leading-4 text-base h-8 px-4 py-2 rounded-lg font-bold tracking-wide text-white font-mono bg-sky-700">
                 {movie?.dangChieu ? (
-                  <span >
-                    Đang Chiếu
-                  </span>
+                  <span>Đang Chiếu</span>
                 ) : movie?.sapChieu ? (
                   <span>Sắp chiếu</span>
                 ) : null}
-                
               </div>
               <div className="flex truncate items-center justify-center gap-4  text-base h-8 px-4 py-2 rounded-lg font-bold text-lime-400 border border-lime-400">
-                <div><FontAwesomeIcon icon={faStar} /></div>
-                <div><span>{movie.danhGia}</span></div>
-                
+                <div>
+                  <FontAwesomeIcon icon={faStar} />
+                </div>
+                <div>
+                  <span>{movie.danhGia}</span>
+                </div>
               </div>
             </div>
             <div>
-              <h1 className="text-yellow-100 font-bold text-center pb-4">{movie.tenPhim}</h1>
-            <p className="text-white">{movie.moTa}</p></div>
-            <div className="flex w-full justify-around pt-5">
-            <div className=" text-xl font-bold  text-center bg-cyan-700 py-4 px-5 rounded-3xl hover:border-2 hover:border-cyan-700 hover:text-cyan-700 hover:bg-white cursor-pointer">
-              <span className="pr-3">Trailer</span>
-              <FontAwesomeIcon icon={faLongArrowAltRight}/>
+              <h1 className="text-yellow-100 font-bold text-center pb-4">
+                {movie.tenPhim}
+              </h1>
+              <p className="text-white  sm:text-center md:text-left">{movie.moTa}</p>
             </div>
-            <div className=" text-xl  font-bold text-center bg-cyan-700 py-4 px-5 rounded-3xl hover:border hover:text-cyan-700 hover:bg-white cursor-pointer">Đặt vé</div>
+            <div className="flex w-full justify-around">
+              <div className="flex items-center  justify-center text-xl font-bold  text-center bg-cyan-700 h-16 w-32 md:py-2 md:px-3 rounded-3xl hover:border-2 hover:border-cyan-700 hover:text-cyan-700 hover:bg-white cursor-pointer">
+                <span className="pr-3">Trailer</span>
+                <FontAwesomeIcon icon={faLongArrowAltRight} />
+              </div>
+              <div className="flex items-center  justify-center text-xl  font-bold text-center bg-cyan-700 h-16 w-32  sm:py-4 sm:px-5 rounded-3xl hover:border hover:text-cyan-700 hover:bg-white cursor-pointer">
+                Đặt vé
+              </div>
+            </div>
           </div>
-          </div>
-          
         </div>
       </div>
     </div>

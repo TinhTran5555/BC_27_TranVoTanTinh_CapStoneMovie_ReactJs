@@ -10,7 +10,7 @@ import { Tabs } from "antd";
 import useViewport from "components/useViewport/useViewport";
 const MovieShowing = () => {
   const viewPort = useViewport();
-  console.log(viewPort);
+  
   const isMobile = viewPort.width <= 1024;
   const isSmallMobile = viewPort.width <= 640;
   const navigate = useNavigate();
@@ -62,7 +62,7 @@ const MovieShowing = () => {
                 <div className="container px-5 py-20 mx-auto">
                   <div className="flex flex-wrap -m-4">
                     <div className="w-full">
-                      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                      <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-2xl overflow-hidden ">
                         {/* <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={movie.hinhAnh} alt="img" /> */}
                         <div
                           className="lg:h-48 md:h-36 w-full"
@@ -71,7 +71,7 @@ const MovieShowing = () => {
                             backgroundImage: `url(${movie.hinhAnh})`,
                           }}
                         ></div>
-                        <div className="p-6">
+                        <div className="p-6 bg-cyan-100">
                           <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
                             {movie.tenPhim}
                           </h1>

@@ -8,8 +8,7 @@
     padding: 0;
     position: fixed;
     width: 100%;
-    left:0;
-    top:0;
+    left: 0;
     right: 0;
     z-index: 1000;
 }
@@ -56,6 +55,9 @@
     font-size: 40px;
     color: black;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
 
 
 
@@ -63,7 +65,7 @@
    
     .MovieShowing .slick-prev {
         left: 0px;
-        transform: translateX(20px);
+       
     }
     .MovieShowing .slick-next {
         right: 0px;
@@ -97,4 +99,5 @@
     .MovieShowing .slick-next {
         right: -25px;
     }
+    
 }

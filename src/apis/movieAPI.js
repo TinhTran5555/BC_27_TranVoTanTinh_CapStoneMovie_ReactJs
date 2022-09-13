@@ -20,6 +20,13 @@ const movieAPI = {
       },
     });
   },
+  getShowTimesDetails: (movieId) => {
+    return axiosClient.get("QuanLyRap/LayThongTinLichChieuPhim", {
+      params: {
+        maPhim: movieId,
+      },
+    });
+  },
 
   GetCumRapDetails: () => {
     return axiosClient.get("QuanLyRap/LayThongTinLichChieuHeThongRap", {
